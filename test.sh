@@ -4,7 +4,7 @@ echo "⏳ Waiting for the app to start..."
 
 # Try up to 10 times with 2 seconds between
 for i in {1..10}; do
-  if curl --fail http://localhost:5000 > /dev/null 2>&1; then
+  if curl --fail http://localhost:8000 > /dev/null 2>&1; then
     echo "✅ App is up and responding!"
     exit 0
   fi
