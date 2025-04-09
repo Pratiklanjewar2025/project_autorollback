@@ -1,9 +1,14 @@
 #!/bin/bash
+
 IMAGE=$1
 CONTAINER_NAME=my_app
 
-# Stop and remove old container if exists
+echo "🚀 Deploying container $CONTAINER_NAME with image $IMAGE"
+
+# Stop and remove old container if it exists
 docker rm -f $CONTAINER_NAME 2>/dev/null || true
 
-# Run new container
-docker run -d --rm --name $CONTAINER_NAME -p 5000:5000 $IMAGE
+# Run new container in background and expose port
+docker run -d --name $CONTAINER_NAME -p 5000:5000 $IMAGE
+
+echo "✅ Container $CONTAINER_NAME deployed."
