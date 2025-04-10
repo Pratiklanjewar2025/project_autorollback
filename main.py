@@ -21,7 +21,7 @@ with open(version_file, "w") as f:
     f.write(str(new_version))
 
 @app.route('/')
-def hello():
+def hello()
     return f"🚀 Hello from version this is new update! successful"
 
 if __name__ == '__main__':
