@@ -21,8 +21,8 @@ with open(version_file, "w") as f:
     f.write(str(new_version))
 
 @app.route('/')
-def hello()
-    return f"🚀 Hello from version this is new update! successful"
+def hello():
+    return f"🚀 Hello from version this is new update! successful this the version 4"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
