@@ -8,7 +8,7 @@ version_file = "version.txt"
 
 with open(version_file, "r") as f:
     version = f.read().strip() 
-
+ 
 # Try to convert and increment version
 try:
     version_num = int(version)
